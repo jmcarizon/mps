@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
             $_SESSION['username'] = $result['username'];
             echo '<p class="success">Congratulations, you are logged in!</p>';
 
-            header('Location: index.php');
+            header('Location: customer.php');
         } else {
             echo '<p class="error">Username password combination is wrong!</p>';
         }
@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
 if (!isset($_SESSION['user_id'])) {
     include_once("login.php");
 } else {
-    header('Location: index.php');
+    header('Location: customer.php');
     exit;
 }
 
